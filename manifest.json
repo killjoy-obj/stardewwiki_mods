@@ -1,0 +1,9 @@
+{
+  "name": "Modded Stardew Lookup",
+  "short_name": "Stardew Lookup",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff3f8",
+  "theme_color": "#fff3f8",
+  "icons": []
+}

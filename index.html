@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff3f8" />
+    <title>Modded Stardew Lookup</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Modded Stardew</h1>
+        <p id="datasetMeta">Lookup</p>
+      </div>
+      <button id="installBtn" class="ghost hidden" type="button">Install</button>
+    </header>
+
+    <main>
+      <section class="searchPanel" aria-label="Search and filters">
+        <label class="searchBox">
+          <span>Search</span>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="crop, fish, machine…" />
+        </label>
+
+        <div class="filterGrid">
+          <label>
+            <span>Type</span>
+            <select id="typeFilter"></select>
+          </label>
+          <label>
+            <span>Mod</span>
+            <select id="modFilter"></select>
+          </label>
+          <label>
+            <span>Season</span>
+            <select id="seasonFilter">
+              <option value="all">All seasons</option>
+              <option value="spring">Spring</option>
+              <option value="summer">Summer</option>
+              <option value="fall">Fall</option>
+              <option value="winter">Winter</option>
+              <option value="all-season">All</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <nav class="tabs" aria-label="Sections">
+        <button data-tab="crops" class="active" type="button">Crops</button>
+        <button data-tab="fish" type="button">Fish</button>
+        <button data-tab="machines" type="button">Machines</button>
+        <button data-tab="cooking" type="button">Cooking</button>
+        <button data-tab="food" type="button">Food</button>
+        <button data-tab="forage" type="button">Forage</button>
+        <button data-tab="trees" type="button">Trees</button>
+        <button data-tab="animals" type="button">Animals</button>
+        <button data-tab="all" type="button">All</button>
+        <button data-tab="sources" type="button">Sources</button>
+        <button data-tab="data" type="button">Data</button>
+      </nav>
+
+      <section id="content" class="content" aria-live="polite"></section>
+    </main>
+
+    <dialog id="detailDialog">
+      <div class="dialogTop">
+        <div>
+          <p id="detailKind" class="eyebrow"></p>
+          <h2 id="detailTitle"></h2>
+        </div>
+        <button id="closeDetail" class="ghost" type="button" aria-label="Close">×</button>
+      </div>
+      <div id="detailBody"></div>
+    </dialog>
+
+    <template id="emptyStateTemplate">
+      <div class="emptyState">
+        <p>No matches.</p>
+      </div>
+    </template>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
