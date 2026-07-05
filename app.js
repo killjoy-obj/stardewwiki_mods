@@ -1,5 +1,5 @@
 const STARTER = window.STARDEW_MOD_WIKI_DATA;
-const STORAGE_KEY = "modded-stardew-lookup-data-v2";
+const STORAGE_KEY = "modded-stardew-lookup-data-v3";
 
 let state = {
   tab: "crops",
@@ -18,6 +18,7 @@ const searchInput = $("#searchInput");
 const typeFilter = $("#typeFilter");
 const modFilter = $("#modFilter");
 const seasonFilter = $("#seasonFilter");
+const suggestions = $("#suggestions");
 const detailDialog = $("#detailDialog");
 const detailKind = $("#detailKind");
 const detailTitle = $("#detailTitle");
@@ -117,6 +118,7 @@ function populateFilters() {
 }
 
 function render() {
+  renderSuggestions();
   const counts = countByCategory();
   $("#datasetMeta").textContent = `${counts.crops} crops · ${counts.fish} fish · ${state.data.machines.length} machines`;
   if (state.tab === "data") return renderDataPanel();
@@ -151,7 +153,7 @@ function filteredRows() {
       return row.season.includes(state.season) || (state.season !== "all-season" && row.season.includes("all-season"));
     });
   }
-  if (state.query) rows = rows.filter((row) => searchableText(row).includes(state.query));
+  if (state.query) rows = rows.filter(rowMatchesQuery);
   return rows.sort((a, b) => a.name.localeCompare(b.name));
 }
 
@@ -178,7 +180,7 @@ function matchesTab(row) {
 }
 
 function isCrop(row) {
-  return row.kind === "item" && hasType(row, ["crop", "flower"]);
+  return row.kind === "item" && hasType(row, ["crop", "flower", "seed"]);
 }
 
 function isFish(row) {
@@ -258,11 +260,14 @@ function itemDetail(item) {
   return `
     ${basicFacts(item)}
     ${tagSection(item.tags)}
-    ${detailRows("Machines", machines.map((entry) => ({
-      title: entry.machine.name,
-      text: `${entry.rule.output}${entry.rule.time ? ` · ${entry.rule.time}` : ""}${entry.rule.note ? ` · ${entry.rule.note}` : ""}`
+    ${item.notes ? `<section class="detailSection"><h3>Note</h3><p class="notice">${esc(item.notes)}</p></section>` : ""}
+    ${detailRows("Can make", machines.map((entry) => ({
+      entity: entry.machine,
+      title: `${entry.machine.name} → ${outputFor(entry.rule, item)}`,
+      text: compactParts([priceTextFor(entry.rule, item), entry.rule.time, entry.rule.requires ? `needs ${entry.rule.requires}` : "", entry.rule.note]).join(" · ")
     })))}
     ${detailRows("Cooking", recipes.map((recipe) => ({
+      entity: recipe,
       title: recipe.name,
       text: recipe.flexible ? "flexible tag" : "fixed ingredient"
     })))}
@@ -271,16 +276,17 @@ function itemDetail(item) {
 }
 
 function machineDetail(machine) {
-  const matches = compatibleItems(machine);
+  const matches = compatibleItems(machine).sort((a, b) => a.item.name.localeCompare(b.item.name));
   return `
     ${basicFacts(machine)}
-    ${detailRows("Outputs", (machine.rules || []).map((rule) => ({
-      title: rule.output,
-      text: `${formatRule(rule)}${rule.note ? ` · ${rule.note}` : ""}`
+    ${detailRows("Rules", (machine.rules || []).map((rule) => ({
+      title: outputFor(rule),
+      text: compactParts([formatRule(rule), rule.priceText || readableFormula(rule), rule.note]).join(" · ")
     })))}
-    ${detailRows("Matching items", matches.map((match) => ({
-      title: match.item.name,
-      text: `${modName(match.item.mod)} · ${match.rule.output}${match.rule.time ? ` · ${match.rule.time}` : ""}`
+    ${detailRows("Usable items", matches.map((match) => ({
+      entity: match.item,
+      title: `${match.item.name} → ${outputFor(match.rule, match.item)}`,
+      text: compactParts([modName(match.item.mod), priceTextFor(match.rule, match.item), match.rule.inputQty ? `${match.rule.inputQty}x input` : "", match.rule.requires ? `needs ${match.rule.requires}` : "", match.rule.time]).join(" · ")
     })))}
     ${sourceLine(machine.source)}
   `;
@@ -373,6 +379,44 @@ function machinesUsingItem(item) {
   });
 }
 
+function outputFor(rule, item = null) {
+  const raw = rule?.output || "Output";
+  if (!item) return raw.replaceAll("{item}", "Item");
+  return raw.replaceAll("{item}", item.name);
+}
+
+function priceTextFor(rule, item) {
+  if (!rule) return "";
+  if (rule.priceText) return rule.priceText;
+  const price = computedPrice(rule, item);
+  if (price == null) return item?.price ? "price unknown" : "price varies";
+  const parts = [`${price}g`];
+  if (rule.artisan) parts.push(`artisan ${Math.floor(price * 1.4)}g`);
+  return parts.join(" · ");
+}
+
+function computedPrice(rule, item) {
+  if (typeof rule.fixedPrice === "number") return rule.fixedPrice;
+  if (!rule.priceFormula || !item || typeof item.price !== "number") return null;
+  const input = item.price;
+  const formula = String(rule.priceFormula).replace(/\s+/g, "");
+  const match = formula.match(/^input\*(\d+(?:\.\d+)?)(?:\+(\d+(?:\.\d+)?))?$/);
+  if (!match) return null;
+  const multiplier = Number(match[1]);
+  const add = Number(match[2] || 0);
+  return Math.floor(input * multiplier + add);
+}
+
+function readableFormula(rule) {
+  if (rule.fixedPrice != null) return `${rule.fixedPrice}g`;
+  if (rule.priceFormula) return rule.priceFormula.replaceAll("input", "input price");
+  return "";
+}
+
+function compactParts(parts) {
+  return parts.filter((part) => part != null && String(part).trim() !== "");
+}
+
 function recipesUsingItem(item) {
   return state.data.recipes.filter((recipe) => (recipe.ingredients || []).some((ingredient) => {
     if (ingredient.item) return normalize(ingredient.item) === normalize(item.id) || normalize(ingredient.item) === normalize(item.name);
@@ -385,10 +429,14 @@ function ruleMatchesItem(rule, item) {
   const any = rule.anyTags || [];
   const all = rule.allTags || [];
   const not = rule.notTags || [];
+  const ids = rule.itemIds || [];
+  const types = rule.inputTypes || [];
   if (not.some((tag) => hasTag(item, tag))) return false;
   if (all.length && !all.every((tag) => hasTag(item, tag))) return false;
+  if (ids.length && !ids.map(normalize).includes(normalize(item.id)) && !ids.map(normalize).includes(normalize(item.name))) return false;
+  if (types.length && !types.some((type) => normalize(item.type).includes(normalize(type)))) return false;
   if (any.length && !any.some((tag) => hasTag(item, tag))) return false;
-  return any.length > 0 || all.length > 0;
+  return any.length > 0 || all.length > 0 || ids.length > 0 || types.length > 0;
 }
 
 function formatRule(rule) {
@@ -503,6 +551,97 @@ function hasTag(item, tag) {
   return (item.tags || []).map(normalize).includes(normalize(tag));
 }
 
+
+function rowMatchesQuery(row) {
+  if (!state.query) return true;
+  const query = normalizeSearch(state.query);
+  const text = normalizeSearch(searchableText(row));
+  if (text.includes(query)) return true;
+  const terms = query.split(" ").filter(Boolean);
+  return terms.length > 1 && terms.every((term) => text.includes(term));
+}
+
+function renderSuggestions() {
+  if (!suggestions) return;
+  const query = (state.query || "").trim();
+  if (query.length < 2) {
+    suggestions.hidden = true;
+    suggestions.innerHTML = "";
+    return;
+  }
+  const rows = suggestionRows(query).slice(0, 8);
+  if (!rows.length) {
+    suggestions.hidden = true;
+    suggestions.innerHTML = "";
+    return;
+  }
+  suggestions.hidden = false;
+  suggestions.innerHTML = rows.map((row) => `
+    <button class="suggestionChip" type="button" data-kind="${esc(row.kind)}" data-id="${esc(row.id)}">
+      ${smallSprite(row)}<span>${esc(row.name)}</span>
+    </button>
+  `).join("");
+  $$(".suggestionChip", suggestions).forEach((button) => {
+    button.addEventListener("click", () => {
+      const row = allRows().find((entry) => entry.kind === button.dataset.kind && entry.id === button.dataset.id);
+      if (!row) return;
+      searchInput.value = row.name;
+      state.query = row.name.toLowerCase();
+      render();
+      openDetail(row.kind, row.id);
+    });
+  });
+}
+
+function suggestionRows(query) {
+  const normalizedQuery = normalizeSearch(query);
+  return allRows()
+    .map((row) => ({ row, score: suggestionScore(row, normalizedQuery) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.row.name.localeCompare(b.row.name))
+    .map((entry) => entry.row);
+}
+
+function suggestionScore(row, query) {
+  const name = normalizeSearch(row.name || "");
+  const text = normalizeSearch(searchableText(row));
+  if (!query) return 0;
+  if (name === query) return 100;
+  if (name.startsWith(query)) return 80;
+  if (name.includes(query)) return 65;
+  const terms = query.split(" ").filter(Boolean);
+  if (terms.length > 1 && terms.every((term) => text.includes(term))) return 52;
+  if (text.includes(query)) return 38;
+  const rowTerms = name.split(" ").filter(Boolean);
+  if (terms.some((term) => rowTerms.some((nameTerm) => nameTerm.startsWith(term) || smallDistance(nameTerm, term) <= 2))) return 24;
+  return 0;
+}
+
+function smallDistance(a, b) {
+  if (Math.abs(a.length - b.length) > 2) return 3;
+  const dp = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+  for (let j = 1; j <= b.length; j++) dp[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      );
+    }
+  }
+  return dp[a.length][b.length];
+}
+
+function normalizeSearch(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[_-]+/g, " ")
+    .replace(/[^a-z0-9\s]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function searchableText(row) {
   return JSON.stringify(row).toLowerCase();
 }
@@ -516,19 +655,29 @@ function sourceById(id) {
 }
 
 function imageUrl(entity) {
-  if (!entity) return "";
-  if (entity.image) return entity.image;
+  return imageCandidates(entity)[0] || "";
+}
+
+function imageCandidates(entity) {
+  if (!entity) return [];
   const source = sourceById(entity.source);
   const sourceUrl = source?.url || entity.sourcePage || "";
   const file = fileName(entity);
-  if (!file) return "";
-  const encoded = encodeURIComponent(file).replaceAll("%2F", "/");
-  if (sourceUrl.includes("stardewcornucopia.wiki.gg")) return `https://stardewcornucopia.wiki.gg/wiki/Special:Redirect/file/${encoded}`;
-  if (sourceUrl.includes("stardew-valley-expanded.fandom.com")) return `https://stardew-valley-expanded.fandom.com/wiki/Special:Redirect/file/${encoded}`;
-  if (sourceUrl.includes("ridgeside.fandom.com")) return `https://ridgeside.fandom.com/wiki/Special:Redirect/file/${encoded}`;
-  if (sourceUrl.includes("eastscarp.fandom.com")) return `https://eastscarp.fandom.com/wiki/Special:Redirect/file/${encoded}`;
-  if (entity.mod === "vanilla") return `https://stardewvalleywiki.com/mediawiki/index.php?title=Special:Redirect/file/${encoded}`;
-  return "";
+  const urls = [];
+  if (entity.image) urls.push(entity.image);
+  if (!file) return [...new Set(urls)];
+  const wikiFile = file.replaceAll(" ", "_");
+  const encoded = encodeURIComponent(wikiFile).replaceAll("%2F", "/");
+  if (sourceUrl.includes("stardewcornucopia.wiki.gg")) urls.push(`https://stardewcornucopia.wiki.gg/wiki/Special:Redirect/file/${encoded}`);
+  if (sourceUrl.includes("stardew-valley-expanded.fandom.com")) urls.push(`https://stardew-valley-expanded.fandom.com/wiki/Special:Redirect/file/${encoded}`);
+  if (sourceUrl.includes("ridgeside.fandom.com")) urls.push(`https://ridgeside.fandom.com/wiki/Special:Redirect/file/${encoded}`);
+  if (sourceUrl.includes("eastscarp.fandom.com")) urls.push(`https://eastscarp.fandom.com/wiki/Special:Redirect/file/${encoded}`);
+  if (entity.mod === "vanilla" || sourceUrl.includes("stardewvalleywiki.com")) {
+    urls.push(`https://stardewvalleywiki.com/Special:Redirect/file/${encoded}`);
+    urls.push(`https://stardewvalleywiki.com/mediawiki/index.php?title=Special:Redirect/file/${encoded}`);
+    urls.push(`https://stardewvalley.fandom.com/wiki/Special:Redirect/file/${encoded}`);
+  }
+  return [...new Set(urls)];
 }
 
 function fileName(entity) {
@@ -538,11 +687,25 @@ function fileName(entity) {
 }
 
 function sprite(entity) {
-  const url = imageUrl(entity);
+  const urls = imageCandidates(entity);
   const letter = (entity?.name || "?").trim().slice(0, 1);
-  if (!url) return `<span class="sprite empty" aria-hidden="true"><span>${esc(letter)}</span></span>`;
-  return `<span class="sprite" aria-hidden="true"><img src="${esc(url)}" alt="" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove();"><span>${esc(letter)}</span></span>`;
+  if (!urls.length) return `<span class="sprite empty" aria-hidden="true"><span>${esc(letter)}</span></span>`;
+  const fallbacks = esc(urls.slice(1).join("|"));
+  return `<span class="sprite" aria-hidden="true"><img src="${esc(urls[0])}" alt="" loading="lazy" data-fallbacks="${fallbacks}" onerror="nextImage(this)"><span>${esc(letter)}</span></span>`;
 }
+
+function nextImage(img) {
+  const fallbacks = (img.dataset.fallbacks || "").split("|").filter(Boolean);
+  if (fallbacks.length) {
+    const [next, ...rest] = fallbacks;
+    img.dataset.fallbacks = rest.join("|");
+    img.src = next;
+    return;
+  }
+  img.parentElement.classList.add("empty");
+  img.remove();
+}
+window.nextImage = nextImage;
 
 function smallSprite(entity) {
   if (!entity) return "";

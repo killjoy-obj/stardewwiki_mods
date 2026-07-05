@@ -1,10 +1,10 @@
 window.STARDEW_MOD_WIKI_DATA = {
   "meta": {
     "name": "Lea's Modded Stardew Lookup",
-    "version": "0.2.0",
+    "version": "0.4.0",
     "updated": "2026-07-05",
     "flexibleCooking": true,
-    "note": "Starter lookup dataset with expanded category lists. Verify rare edge cases against your installed mod files."
+    "note": "Added search suggestions, mustard seed lookup entries, direct vanilla image URLs, and improved seed/crop visibility."
   },
   "mods": [
     {
@@ -229,6 +229,48 @@ window.STARDEW_MOD_WIKI_DATA = {
       "title": "Mizu's Horse",
       "url": "https://www.nexusmods.com/stardewvalley/mods/47473",
       "kind": "nexus"
+    },
+    {
+      "id": "vanilla-crops",
+      "mod": "vanilla",
+      "title": "Stardew Valley Wiki: Crops",
+      "url": "https://stardewvalleywiki.com/Crops",
+      "kind": "wiki"
+    },
+    {
+      "id": "vanilla-keg",
+      "mod": "vanilla",
+      "title": "Stardew Valley Wiki: Keg",
+      "url": "https://stardewvalleywiki.com/Keg",
+      "kind": "wiki"
+    },
+    {
+      "id": "vanilla-preserves",
+      "mod": "vanilla",
+      "title": "Stardew Valley Wiki: Preserves Jar",
+      "url": "https://stardewvalleywiki.com/Preserves_Jar",
+      "kind": "wiki"
+    },
+    {
+      "id": "vanilla-dehydrator",
+      "mod": "vanilla",
+      "title": "Stardew Valley Wiki: Dehydrator",
+      "url": "https://stardewvalleywiki.com/Dehydrator",
+      "kind": "wiki"
+    },
+    {
+      "id": "vanilla-fish-smoker",
+      "mod": "vanilla",
+      "title": "Stardew Valley Wiki: Fish Smoker",
+      "url": "https://stardewvalleywiki.com/Fish_Smoker",
+      "kind": "wiki"
+    },
+    {
+      "id": "vanilla-machines",
+      "mod": "vanilla",
+      "title": "Stardew Valley Wiki: Equipment",
+      "url": "https://stardewvalleywiki.com/Crafting#Crafted_goods",
+      "kind": "wiki"
     }
   ],
   "items": [
@@ -350,7 +392,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "type": "animal product",
       "mod": "vanilla",
       "tags": [
-        "egg_item"
+        "egg_item",
+        "small_egg_item"
       ],
       "price": 50,
       "source": "vanilla"
@@ -375,7 +418,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "vanilla",
       "tags": [
         "milk_item",
-        "dairy_item"
+        "dairy_item",
+        "cow_milk_item"
       ],
       "price": 125,
       "source": "vanilla"
@@ -514,7 +558,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "adzuki_bean_item",
         "crop_item",
-        "legume_item"
+        "legume_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -529,7 +574,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "agave_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -545,7 +591,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "aloe_item",
         "plant_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "season": [
@@ -560,7 +607,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "asparagus_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -575,7 +623,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "bamboo_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -592,7 +641,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "barley_item",
         "crop_item",
-        "grain_item"
+        "grain_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -607,7 +657,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "basil_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -622,7 +673,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "bay_leaves_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -639,7 +691,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "bell_pepper_item",
         "crop_item",
         "chili_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -655,7 +708,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "black_beans_item",
         "crop_item",
-        "legume_item"
+        "legume_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -670,7 +724,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "blue_agave_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -686,7 +741,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "grain_item",
         "buckwheat_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "season": [
@@ -701,7 +757,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "butternut_squash_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -718,7 +775,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "cabbage_item",
         "crop_item",
         "leafy_green_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -734,7 +792,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "canary_melon_item",
         "crop_item",
-        "fruit_item"
+        "fruit_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -749,7 +808,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "canola_flower_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -766,7 +826,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "cantaloupe_item",
         "crop_item",
-        "fruit_item"
+        "fruit_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -781,7 +842,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "cassava_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -796,7 +858,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "catnip_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -811,7 +874,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "celery_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -827,7 +891,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "chicken_of_the_woods_item",
         "crop_item",
-        "edible_mushroom"
+        "edible_mushroom",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -844,7 +909,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "chickpea_item",
         "crop_item",
-        "legume_item"
+        "legume_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -860,7 +926,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "vegetable_item",
         "chili_item",
-        "pepper_item"
+        "pepper_item",
+        "produce_item"
       ],
       "season": [
         "summer"
@@ -875,7 +942,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "chives_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -890,7 +958,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "cilantro_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -905,7 +974,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "cocoa_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops"
     },
@@ -916,7 +986,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "cotton_boll_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -932,7 +1003,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "cucumber_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -947,7 +1019,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "cumin_seeds_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -964,7 +1037,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "daikon_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -979,7 +1053,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "dill_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -995,7 +1070,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "durum_item",
         "crop_item",
-        "grain_item"
+        "grain_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1010,7 +1086,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "fennel_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1025,7 +1102,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "fenugreek_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1042,7 +1120,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "ginseng_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1059,7 +1138,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "green_peas_item",
         "crop_item",
-        "legume_item"
+        "legume_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1074,7 +1154,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "groundcherries_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1092,7 +1173,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "habanero_item",
         "crop_item",
         "chili_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1108,7 +1190,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "honeydew_item",
         "crop_item",
-        "fruit_item"
+        "fruit_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1125,7 +1208,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "jalape_o_item",
         "crop_item",
         "chili_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1141,7 +1225,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "kidney_beans_item",
         "crop_item",
-        "legume_item"
+        "legume_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1157,7 +1242,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "kiwifruit_item",
         "crop_item",
-        "fruit_item"
+        "fruit_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1172,7 +1258,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "lemongrass_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1189,7 +1276,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "lettuce_item",
         "crop_item",
         "leafy_green_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1206,7 +1294,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "licorice_root_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1221,7 +1310,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "marjoram_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1236,7 +1326,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "mint_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1252,7 +1343,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "navy_beans_item",
         "crop_item",
-        "legume_item"
+        "legume_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1268,7 +1360,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "oats_item",
         "crop_item",
-        "grain_item"
+        "grain_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1283,7 +1376,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "okra_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1300,7 +1394,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "olive_item",
         "crop_item",
-        "fruit_item"
+        "fruit_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1317,7 +1412,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "onion_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1332,7 +1428,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "oregano_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1347,7 +1444,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "parsley_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1363,7 +1461,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "passion_fruit_item",
         "crop_item",
-        "fruit_item"
+        "fruit_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1380,7 +1479,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "nut_item",
         "peanut_item",
         "crop_item",
-        "legume_item"
+        "legume_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "season": [
@@ -1397,7 +1497,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "peppercorn_item",
         "crop_item",
         "chili_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1414,7 +1515,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "perilla_leaves_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1430,7 +1532,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "pinto_beans_item",
         "crop_item",
-        "legume_item"
+        "legume_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1446,7 +1549,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "quinoa_item",
         "crop_item",
-        "grain_item"
+        "grain_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1463,7 +1567,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "red_onion_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1478,7 +1583,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "rosemary_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1493,7 +1599,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "sage_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1510,7 +1617,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "shallot_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1526,7 +1634,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "shiitake_item",
         "crop_item",
-        "edible_mushroom"
+        "edible_mushroom",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1543,7 +1652,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "soybeans_item",
         "crop_item",
-        "legume_item"
+        "legume_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1560,7 +1670,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "spinach_item",
         "crop_item",
         "leafy_green_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1578,7 +1689,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "sugar_beet_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1593,7 +1705,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "sugarcane_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1610,7 +1723,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "sweet_potato_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1625,7 +1739,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "tarragon_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1640,7 +1755,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "thyme_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1655,7 +1771,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "turmeric_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1672,7 +1789,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "turnip_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1687,7 +1805,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "vanilla_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1704,7 +1823,8 @@ window.STARDEW_MOD_WIKI_DATA = {
         "wasabi_root_item",
         "crop_item",
         "root_vegetable_item",
-        "vegetable_item"
+        "vegetable_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1720,7 +1840,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "watermelon_item",
         "crop_item",
-        "fruit_item"
+        "fruit_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1736,7 +1857,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "white_grape_item",
         "crop_item",
-        "fruit_item"
+        "fruit_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1751,7 +1873,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "wormwood_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1766,7 +1889,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "mod": "cornucopia",
       "tags": [
         "zucchini_item",
-        "crop_item"
+        "crop_item",
+        "produce_item"
       ],
       "source": "corn-crops",
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Crops",
@@ -1782,7 +1906,8 @@ window.STARDEW_MOD_WIKI_DATA = {
       "tags": [
         "vegetable_item",
         "root_vegetable_item",
-        "sweet_potato_item"
+        "sweet_potato_item",
+        "produce_item"
       ],
       "season": [
         "fall"
@@ -1796,16 +1921,20 @@ window.STARDEW_MOD_WIKI_DATA = {
       "type": "crop",
       "mod": "vanilla",
       "tags": [
-        "vegetable_item",
+        "wheat_item",
+        "crop_item",
         "grain_item",
-        "wheat_item"
+        "produce_item"
       ],
       "season": [
         "summer",
         "fall"
       ],
       "price": 25,
-      "source": "vanilla"
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Wheat",
+      "imageFile": "Wheat.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/e/e2/Wheat.png"
     },
     {
       "id": "eastscarp_cerulean_nudibranch",
@@ -4038,19 +4167,22 @@ window.STARDEW_MOD_WIKI_DATA = {
     {
       "id": "apple",
       "name": "Apple",
-      "type": "fruit",
+      "type": "tree fruit",
       "mod": "vanilla",
       "tags": [
-        "fruit_item",
         "apple_item",
-        "tree_fruit_item"
+        "tree_fruit_item",
+        "fruit_item"
       ],
       "season": [
         "fall"
       ],
       "price": 100,
-      "source": "vanilla",
-      "notes": "Works as a generic fruit in tag-based rules."
+      "source": "vanilla-crops",
+      "notes": "Works as a generic fruit in tag-based rules.",
+      "sourcePage": "https://stardewvalleywiki.com/Apple",
+      "imageFile": "Apple.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/7/7d/Apple.png"
     },
     {
       "id": "oil",
@@ -4186,6 +4318,1455 @@ window.STARDEW_MOD_WIKI_DATA = {
       "season": [
         "summer"
       ]
+    },
+    {
+      "id": "blue_jazz",
+      "name": "Blue Jazz",
+      "type": "flower",
+      "mod": "vanilla",
+      "tags": [
+        "blue_jazz_item",
+        "flower_item",
+        "crop_item",
+        "jazz_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 50,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Blue_Jazz",
+      "imageFile": "Blue_Jazz.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/2/2f/Blue_Jazz.png"
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "carrot_item",
+        "vegetable_item",
+        "crop_item",
+        "root_vegetable_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 35,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Carrot",
+      "imageFile": "Carrot.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/c/c3/Carrot.png"
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "cauliflower_item",
+        "vegetable_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 175,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Cauliflower",
+      "imageFile": "Cauliflower.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/a/aa/Cauliflower.png"
+    },
+    {
+      "id": "coffee_bean",
+      "name": "Coffee Bean",
+      "type": "crop",
+      "mod": "vanilla",
+      "tags": [
+        "coffee_bean_item",
+        "crop_item",
+        "bean_item",
+        "coffee_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "price": 15,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Coffee_Bean",
+      "imageFile": "Coffee_Bean.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/3/33/Coffee_Bean.png"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "garlic_item",
+        "vegetable_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 60,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Garlic",
+      "imageFile": "Garlic.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/c/cc/Garlic.png"
+    },
+    {
+      "id": "green_bean",
+      "name": "Green Bean",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "green_bean_item",
+        "vegetable_item",
+        "crop_item",
+        "bean_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 40,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Green_Bean",
+      "imageFile": "Green_Bean.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/5/5c/Green_Bean.png"
+    },
+    {
+      "id": "kale",
+      "name": "Kale",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "kale_item",
+        "vegetable_item",
+        "crop_item",
+        "leafy_green_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 110,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Kale",
+      "imageFile": "Kale.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/d/d1/Kale.png"
+    },
+    {
+      "id": "parsnip",
+      "name": "Parsnip",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "parsnip_item",
+        "vegetable_item",
+        "crop_item",
+        "root_vegetable_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 35,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Parsnip",
+      "imageFile": "Parsnip.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/d/db/Parsnip.png"
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "potato_item",
+        "vegetable_item",
+        "crop_item",
+        "root_vegetable_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 80,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Potato",
+      "imageFile": "Potato.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/c/c2/Potato.png"
+    },
+    {
+      "id": "rhubarb",
+      "name": "Rhubarb",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "rhubarb_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 220,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Rhubarb",
+      "imageFile": "Rhubarb.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/6/6e/Rhubarb.png"
+    },
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "strawberry_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 120,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Strawberry",
+      "imageFile": "Strawberry.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/6/6d/Strawberry.png"
+    },
+    {
+      "id": "tulip",
+      "name": "Tulip",
+      "type": "flower",
+      "mod": "vanilla",
+      "tags": [
+        "tulip_item",
+        "flower_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 30,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Tulip",
+      "imageFile": "Tulip.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/c/cf/Tulip.png"
+    },
+    {
+      "id": "unmilled_rice",
+      "name": "Unmilled Rice",
+      "type": "crop",
+      "mod": "vanilla",
+      "tags": [
+        "unmilled_rice_item",
+        "crop_item",
+        "rice_item",
+        "grain_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 30,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Unmilled_Rice",
+      "imageFile": "Unmilled_Rice.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/fe/Unmilled_Rice.png"
+    },
+    {
+      "id": "blueberry",
+      "name": "Blueberry",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "blueberry_item",
+        "fruit_item",
+        "crop_item",
+        "berry_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 50,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Blueberry",
+      "imageFile": "Blueberry.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/9/9e/Blueberry.png"
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "corn_item",
+        "vegetable_item",
+        "crop_item",
+        "grain_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer",
+        "fall"
+      ],
+      "price": 50,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Corn",
+      "imageFile": "Corn.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/f8/Corn.png"
+    },
+    {
+      "id": "hops",
+      "name": "Hops",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "hops_item",
+        "vegetable_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 25,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Hops",
+      "imageFile": "Hops.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/5/59/Hops.png"
+    },
+    {
+      "id": "hot_pepper",
+      "name": "Hot Pepper",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "hot_pepper_item",
+        "fruit_item",
+        "crop_item",
+        "pepper_item",
+        "chili_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 40,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Hot_Pepper",
+      "imageFile": "Hot_Pepper.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Hot_Pepper.png"
+    },
+    {
+      "id": "melon",
+      "name": "Melon",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "melon_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 250,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Melon",
+      "imageFile": "Melon.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/1/19/Melon.png"
+    },
+    {
+      "id": "poppy",
+      "name": "Poppy",
+      "type": "flower",
+      "mod": "vanilla",
+      "tags": [
+        "poppy_item",
+        "flower_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 140,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Poppy",
+      "imageFile": "Poppy.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/3/37/Poppy.png"
+    },
+    {
+      "id": "radish",
+      "name": "Radish",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "radish_item",
+        "vegetable_item",
+        "crop_item",
+        "root_vegetable_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 90,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Radish",
+      "imageFile": "Radish.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/d/d5/Radish.png"
+    },
+    {
+      "id": "red_cabbage",
+      "name": "Red Cabbage",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "red_cabbage_item",
+        "vegetable_item",
+        "crop_item",
+        "cabbage_item",
+        "leafy_green_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 260,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Red_Cabbage",
+      "imageFile": "Red_Cabbage.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/2/2d/Red_Cabbage.png"
+    },
+    {
+      "id": "starfruit",
+      "name": "Starfruit",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "starfruit_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 750,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Starfruit",
+      "imageFile": "Starfruit.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/d/db/Starfruit.png"
+    },
+    {
+      "id": "summer_spangle",
+      "name": "Summer Spangle",
+      "type": "flower",
+      "mod": "vanilla",
+      "tags": [
+        "summer_spangle_item",
+        "flower_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 90,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Summer_Spangle",
+      "imageFile": "Summer_Spangle.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/9/9f/Summer_Spangle.png"
+    },
+    {
+      "id": "summer_squash",
+      "name": "Summer Squash",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "summer_squash_item",
+        "vegetable_item",
+        "crop_item",
+        "squash_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 45,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Summer_Squash",
+      "imageFile": "Summer_Squash.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/4/43/Summer_Squash.png"
+    },
+    {
+      "id": "sunflower",
+      "name": "Sunflower",
+      "type": "flower",
+      "mod": "vanilla",
+      "tags": [
+        "sunflower_item",
+        "flower_item",
+        "crop_item",
+        "oil_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer",
+        "fall"
+      ],
+      "price": 80,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Sunflower",
+      "imageFile": "Sunflower.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/8/81/Sunflower.png"
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "tomato_item",
+        "vegetable_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 60,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Tomato",
+      "imageFile": "Tomato.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/9/9d/Tomato.png"
+    },
+    {
+      "id": "amaranth",
+      "name": "Amaranth",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "amaranth_item",
+        "vegetable_item",
+        "crop_item",
+        "grain_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 150,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Amaranth",
+      "imageFile": "Amaranth.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/f6/Amaranth.png"
+    },
+    {
+      "id": "artichoke",
+      "name": "Artichoke",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "artichoke_item",
+        "vegetable_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 160,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Artichoke",
+      "imageFile": "Artichoke.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/d/dd/Artichoke.png"
+    },
+    {
+      "id": "beet",
+      "name": "Beet",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "beet_item",
+        "vegetable_item",
+        "crop_item",
+        "root_vegetable_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 100,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Beet",
+      "imageFile": "Beet.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/a/a4/Beet.png"
+    },
+    {
+      "id": "bok_choy",
+      "name": "Bok Choy",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "bok_choy_item",
+        "vegetable_item",
+        "crop_item",
+        "leafy_green_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 80,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Bok_Choy",
+      "imageFile": "Bok_Choy.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/4/40/Bok_Choy.png"
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "broccoli_item",
+        "vegetable_item",
+        "crop_item",
+        "leafy_green_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 70,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Broccoli",
+      "imageFile": "Broccoli.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Broccoli.png"
+    },
+    {
+      "id": "cranberries",
+      "name": "Cranberries",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "cranberries_item",
+        "fruit_item",
+        "crop_item",
+        "berry_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 75,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Cranberries",
+      "imageFile": "Cranberries.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/6/6e/Cranberries.png"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "eggplant_item",
+        "vegetable_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 60,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Eggplant",
+      "imageFile": "Eggplant.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/8/8f/Eggplant.png"
+    },
+    {
+      "id": "fairy_rose",
+      "name": "Fairy Rose",
+      "type": "flower",
+      "mod": "vanilla",
+      "tags": [
+        "fairy_rose_item",
+        "flower_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 290,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Fairy_Rose",
+      "imageFile": "Fairy_Rose.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/5/5c/Fairy_Rose.png"
+    },
+    {
+      "id": "grape",
+      "name": "Grape",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "grape_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 80,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Grape",
+      "imageFile": "Grape.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/c/c2/Grape.png"
+    },
+    {
+      "id": "pumpkin",
+      "name": "Pumpkin",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "pumpkin_item",
+        "vegetable_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 320,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Pumpkin",
+      "imageFile": "Pumpkin.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/6/64/Pumpkin.png"
+    },
+    {
+      "id": "yam",
+      "name": "Yam",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "yam_item",
+        "vegetable_item",
+        "crop_item",
+        "root_vegetable_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 160,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Yam",
+      "imageFile": "Yam.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/5/52/Yam.png"
+    },
+    {
+      "id": "powdermelon",
+      "name": "Powdermelon",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "powdermelon_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "winter"
+      ],
+      "price": 60,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Powdermelon",
+      "imageFile": "Powdermelon.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/a/aa/Powdermelon.png"
+    },
+    {
+      "id": "ancient_fruit",
+      "name": "Ancient Fruit",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "ancient_fruit_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "price": 550,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Ancient_Fruit",
+      "imageFile": "Ancient_Fruit.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/0/01/Ancient_Fruit.png"
+    },
+    {
+      "id": "cactus_fruit",
+      "name": "Cactus Fruit",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "cactus_fruit_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "all-season"
+      ],
+      "price": 75,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Cactus_Fruit",
+      "imageFile": "Cactus_Fruit.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/3/32/Cactus_Fruit.png"
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "pineapple_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 300,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Pineapple",
+      "imageFile": "Pineapple.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/fb/Pineapple.png"
+    },
+    {
+      "id": "taro_root",
+      "name": "Taro Root",
+      "type": "vegetable",
+      "mod": "vanilla",
+      "tags": [
+        "taro_root_item",
+        "vegetable_item",
+        "crop_item",
+        "root_vegetable_item",
+        "produce_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 100,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Taro_Root",
+      "imageFile": "Taro_Root.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/0/01/Taro_Root.png"
+    },
+    {
+      "id": "tea_leaves",
+      "name": "Tea Leaves",
+      "type": "crop",
+      "mod": "vanilla",
+      "tags": [
+        "tea_leaves_item",
+        "crop_item",
+        "tea_item",
+        "produce_item"
+      ],
+      "season": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "price": 50,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Tea_Leaves",
+      "imageFile": "Tea_Leaves.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/5/5b/Tea_Leaves.png"
+    },
+    {
+      "id": "qi_fruit",
+      "name": "Qi Fruit",
+      "type": "fruit",
+      "mod": "vanilla",
+      "tags": [
+        "qi_fruit_item",
+        "fruit_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "all-season"
+      ],
+      "price": 1,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Qi_Fruit",
+      "imageFile": "Qi_Fruit.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/b/b9/Qi_Fruit.png"
+    },
+    {
+      "id": "sweet_gem_berry",
+      "name": "Sweet Gem Berry",
+      "type": "crop",
+      "mod": "vanilla",
+      "tags": [
+        "sweet_gem_berry_item",
+        "crop_item",
+        "produce_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 3000,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Sweet_Gem_Berry",
+      "imageFile": "Sweet_Gem_Berry.png",
+      "notes": "Cannot be processed by Keg or Preserves Jar in vanilla; kept as crop lookup item.",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/8/88/Sweet_Gem_Berry.png"
+    },
+    {
+      "id": "apricot",
+      "name": "Apricot",
+      "type": "tree fruit",
+      "mod": "vanilla",
+      "tags": [
+        "apricot_item",
+        "tree_fruit_item",
+        "fruit_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 50,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Apricot",
+      "imageFile": "Apricot.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/fc/Apricot.png"
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "type": "tree fruit",
+      "mod": "vanilla",
+      "tags": [
+        "banana_item",
+        "tree_fruit_item",
+        "fruit_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 150,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Banana",
+      "imageFile": "Banana.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/6/69/Banana.png"
+    },
+    {
+      "id": "cherry",
+      "name": "Cherry",
+      "type": "tree fruit",
+      "mod": "vanilla",
+      "tags": [
+        "cherry_item",
+        "tree_fruit_item",
+        "fruit_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 80,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Cherry",
+      "imageFile": "Cherry.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/2/20/Cherry.png"
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "type": "tree fruit",
+      "mod": "vanilla",
+      "tags": [
+        "mango_item",
+        "tree_fruit_item",
+        "fruit_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 130,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Mango",
+      "imageFile": "Mango.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/3/38/Mango.png"
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "type": "tree fruit",
+      "mod": "vanilla",
+      "tags": [
+        "orange_item",
+        "tree_fruit_item",
+        "fruit_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 100,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Orange",
+      "imageFile": "Orange.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/4/43/Orange.png"
+    },
+    {
+      "id": "peach",
+      "name": "Peach",
+      "type": "tree fruit",
+      "mod": "vanilla",
+      "tags": [
+        "peach_item",
+        "tree_fruit_item",
+        "fruit_item"
+      ],
+      "season": [
+        "summer"
+      ],
+      "price": 140,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Peach",
+      "imageFile": "Peach.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/e/e2/Peach.png"
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate",
+      "type": "tree fruit",
+      "mod": "vanilla",
+      "tags": [
+        "pomegranate_item",
+        "tree_fruit_item",
+        "fruit_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 140,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Pomegranate",
+      "imageFile": "Pomegranate.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Pomegranate.png"
+    },
+    {
+      "id": "moss",
+      "name": "Moss",
+      "type": "forage",
+      "mod": "vanilla",
+      "tags": [
+        "moss_item",
+        "forage_item"
+      ],
+      "season": [
+        "all-season"
+      ],
+      "price": 5,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Moss",
+      "imageFile": "Moss.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/6/64/Moss.png"
+    },
+    {
+      "id": "common_mushroom",
+      "name": "Common Mushroom",
+      "type": "mushroom",
+      "mod": "vanilla",
+      "tags": [
+        "common_mushroom_item",
+        "mushroom_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 40,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Common_Mushroom",
+      "imageFile": "Common_Mushroom.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/2/2e/Common_Mushroom.png"
+    },
+    {
+      "id": "morel",
+      "name": "Morel",
+      "type": "mushroom",
+      "mod": "vanilla",
+      "tags": [
+        "morel_item",
+        "mushroom_item"
+      ],
+      "season": [
+        "spring"
+      ],
+      "price": 150,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Morel",
+      "imageFile": "Morel.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/b/b1/Morel.png"
+    },
+    {
+      "id": "chanterelle",
+      "name": "Chanterelle",
+      "type": "mushroom",
+      "mod": "vanilla",
+      "tags": [
+        "chanterelle_item",
+        "mushroom_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 160,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Chanterelle",
+      "imageFile": "Chanterelle.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/1/1d/Chanterelle.png"
+    },
+    {
+      "id": "red_mushroom",
+      "name": "Red Mushroom",
+      "type": "mushroom",
+      "mod": "vanilla",
+      "tags": [
+        "red_mushroom_item",
+        "mushroom_item"
+      ],
+      "season": [
+        "summer",
+        "fall"
+      ],
+      "price": 75,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Red_Mushroom",
+      "imageFile": "Red_Mushroom.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/e/e1/Red_Mushroom.png"
+    },
+    {
+      "id": "purple_mushroom",
+      "name": "Purple Mushroom",
+      "type": "mushroom",
+      "mod": "vanilla",
+      "tags": [
+        "purple_mushroom_item",
+        "mushroom_item"
+      ],
+      "season": [
+        "fall"
+      ],
+      "price": 250,
+      "source": "vanilla-crops",
+      "sourcePage": "https://stardewvalleywiki.com/Purple_Mushroom",
+      "imageFile": "Purple_Mushroom.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png"
+    },
+    {
+      "id": "large_egg",
+      "name": "Large Egg",
+      "type": "animal product",
+      "mod": "vanilla",
+      "tags": [
+        "large_egg_item",
+        "animal_product_item",
+        "egg_item"
+      ],
+      "season": [],
+      "price": 95,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Large_Egg",
+      "imageFile": "Large_Egg.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/5/5d/Large_Egg.png"
+    },
+    {
+      "id": "duck_egg",
+      "name": "Duck Egg",
+      "type": "animal product",
+      "mod": "vanilla",
+      "tags": [
+        "duck_egg_item",
+        "animal_product_item",
+        "egg_item"
+      ],
+      "season": [],
+      "price": 95,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Duck_Egg",
+      "imageFile": "Duck_Egg.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/3/31/Duck_Egg.png"
+    },
+    {
+      "id": "dinosaur_egg",
+      "name": "Dinosaur Egg",
+      "type": "animal product",
+      "mod": "vanilla",
+      "tags": [
+        "dinosaur_egg_item",
+        "animal_product_item",
+        "egg_item"
+      ],
+      "season": [],
+      "price": 350,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Dinosaur_Egg",
+      "imageFile": "Dinosaur_Egg.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/a/a1/Dinosaur_Egg.png"
+    },
+    {
+      "id": "ostrich_egg",
+      "name": "Ostrich Egg",
+      "type": "animal product",
+      "mod": "vanilla",
+      "tags": [
+        "ostrich_egg_item",
+        "animal_product_item",
+        "egg_item"
+      ],
+      "season": [],
+      "price": 600,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Ostrich_Egg",
+      "imageFile": "Ostrich_Egg.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/c/c3/Ostrich_Egg.png"
+    },
+    {
+      "id": "large_milk",
+      "name": "Large Milk",
+      "type": "animal product",
+      "mod": "vanilla",
+      "tags": [
+        "large_milk_item",
+        "animal_product_item",
+        "milk_item",
+        "cow_milk_item",
+        "dairy_item"
+      ],
+      "season": [],
+      "price": 190,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Large_Milk",
+      "imageFile": "Large_Milk.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/6/67/Large_Milk.png"
+    },
+    {
+      "id": "large_goat_milk",
+      "name": "Large Goat Milk",
+      "type": "animal product",
+      "mod": "vanilla",
+      "tags": [
+        "large_goat_milk_item",
+        "animal_product_item",
+        "milk_item",
+        "goat_milk_item",
+        "dairy_item"
+      ],
+      "season": [],
+      "price": 345,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Large_Goat_Milk",
+      "imageFile": "Large_Goat_Milk.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/f2/Large_Goat_Milk.png"
+    },
+    {
+      "id": "wool",
+      "name": "Wool",
+      "type": "animal product",
+      "mod": "vanilla",
+      "tags": [
+        "wool_item",
+        "animal_product_item"
+      ],
+      "season": [],
+      "price": 340,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Wool",
+      "imageFile": "Wool.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/3/34/Wool.png"
+    },
+    {
+      "id": "duck_feather",
+      "name": "Duck Feather",
+      "type": "animal product",
+      "mod": "vanilla",
+      "tags": [
+        "duck_feather_item",
+        "animal_product_item",
+        "feather_item"
+      ],
+      "season": [],
+      "price": 250,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Duck_Feather",
+      "imageFile": "Duck_Feather.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/f9/Duck_Feather.png"
+    },
+    {
+      "id": "truffle",
+      "name": "Truffle",
+      "type": "forage",
+      "mod": "vanilla",
+      "tags": [
+        "truffle_item",
+        "forage_item"
+      ],
+      "season": [],
+      "price": 625,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Truffle",
+      "imageFile": "Truffle.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/f/f2/Truffle.png"
+    },
+    {
+      "id": "sunflower_seeds",
+      "name": "Sunflower Seeds",
+      "type": "seed",
+      "mod": "vanilla",
+      "tags": [
+        "sunflower_seeds_item"
+      ],
+      "season": [],
+      "price": 20,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Sunflower_Seeds",
+      "imageFile": "Sunflower_Seeds.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/1/1f/Sunflower_Seeds.png"
+    },
+    {
+      "id": "roe",
+      "name": "Roe",
+      "type": "fish product",
+      "mod": "vanilla",
+      "tags": [
+        "roe_item"
+      ],
+      "season": [],
+      "price": 30,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Roe",
+      "imageFile": "Roe.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/5/56/Roe.png"
+    },
+    {
+      "id": "sturgeon_roe",
+      "name": "Sturgeon Roe",
+      "type": "fish product",
+      "mod": "vanilla",
+      "tags": [
+        "sturgeon_roe_item",
+        "roe_item"
+      ],
+      "season": [],
+      "price": 130,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Sturgeon_Roe",
+      "imageFile": "Sturgeon_Roe.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/d/d1/Sturgeon_Roe.png"
+    },
+    {
+      "id": "coal",
+      "name": "Coal",
+      "type": "resource",
+      "mod": "vanilla",
+      "tags": [
+        "coal_item"
+      ],
+      "season": [],
+      "price": 15,
+      "source": "vanilla-machines",
+      "sourcePage": "https://stardewvalleywiki.com/Coal",
+      "imageFile": "Coal.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/a/a7/Coal.png"
+    },
+    {
+      "id": "corn_mustard_seeds",
+      "name": "Mustard Seeds",
+      "type": "seed",
+      "mod": "cornucopia",
+      "tags": [
+        "mustard_seeds_item",
+        "seed_item",
+        "crop_seed_item",
+        "mustard_item",
+        "spice_item",
+        "produce_item"
+      ],
+      "season": [
+        "winter"
+      ],
+      "source": "corn-crops",
+      "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Mustard_Seeds",
+      "imageFile": "Mustard Seeds.png",
+      "notes": "Winter seed. Grows into Mustard Greens in 4 days and may also be used in cooking."
+    },
+    {
+      "id": "corn_mustard_greens",
+      "name": "Mustard Greens",
+      "type": "vegetable",
+      "mod": "cornucopia",
+      "tags": [
+        "mustard_greens_item",
+        "vegetable_item",
+        "crop_item",
+        "leafy_green_item",
+        "herb_item",
+        "produce_item",
+        "mustard_item"
+      ],
+      "season": [
+        "winter"
+      ],
+      "price": 40,
+      "source": "corn-crops",
+      "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Mustard_Greens",
+      "imageFile": "Mustard Greens.png",
+      "notes": "Winter crop grown from Mustard Seeds in 4 days."
+    },
+    {
+      "id": "corn_mustard",
+      "name": "Mustard",
+      "type": "food",
+      "mod": "cornucopia",
+      "tags": [
+        "mustard_item",
+        "condiment_item",
+        "food_item",
+        "cooked_item"
+      ],
+      "source": "corn-cooking",
+      "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Mustard",
+      "imageFile": "Mustard.png",
+      "notes": "Cooked condiment made with Mustard Seeds and Vinegar."
     }
   ],
   "machines": [
@@ -4201,8 +5782,10 @@ window.STARDEW_MOD_WIKI_DATA = {
             "herb_item",
             "flower_item"
           ],
-          "output": "Essential Oil",
-          "time": "modded"
+          "output": "{item} Essential Oil",
+          "time": "modded",
+          "priceFormula": "input*2",
+          "artisan": true
         },
         {
           "id": "alembic-prismatic",
@@ -4344,24 +5927,30 @@ window.STARDEW_MOD_WIKI_DATA = {
           "anyTags": [
             "vegetable_item"
           ],
-          "output": "Dried Vegetable",
-          "time": "modded"
+          "output": "Dried {item}",
+          "time": "modded",
+          "priceFormula": "input*2",
+          "artisan": true
         },
         {
           "id": "dehydrate-flower",
           "anyTags": [
             "flower_item"
           ],
-          "output": "Dried Flower",
-          "time": "modded"
+          "output": "Dried {item}",
+          "time": "modded",
+          "priceFormula": "input*1.75",
+          "artisan": true
         },
         {
           "id": "dehydrate-herb",
           "anyTags": [
             "herb_item"
           ],
-          "output": "Dried Herb",
-          "time": "modded"
+          "output": "Dried {item}",
+          "time": "modded",
+          "priceFormula": "input*1.75",
+          "artisan": true
         }
       ],
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Artisan_Machines",
@@ -4418,9 +6007,11 @@ window.STARDEW_MOD_WIKI_DATA = {
           "anyTags": [
             "fish_item"
           ],
-          "output": "Smoked Fish",
+          "output": "Smoked {item}",
           "time": "modded",
-          "note": "Generic fallback; verify output name in-game."
+          "note": "Generic fallback; verify output name in-game.",
+          "priceFormula": "input*2",
+          "artisan": true
         }
       ],
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Artisan_Machines",
@@ -4437,16 +6028,20 @@ window.STARDEW_MOD_WIKI_DATA = {
           "anyTags": [
             "flower_item"
           ],
-          "output": "Dried Flower",
-          "time": "modded"
+          "output": "Dried {item}",
+          "time": "modded",
+          "priceFormula": "input*1.75",
+          "artisan": true
         },
         {
           "id": "rack-herb",
           "anyTags": [
             "herb_item"
           ],
-          "output": "Dried Herb",
-          "time": "modded"
+          "output": "Dried {item}",
+          "time": "modded",
+          "priceFormula": "input*1.75",
+          "artisan": true
         }
       ],
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Artisan_Machines",
@@ -4513,16 +6108,20 @@ window.STARDEW_MOD_WIKI_DATA = {
           "anyTags": [
             "fruit_item"
           ],
-          "output": "Juice",
-          "time": "modded"
+          "output": "{item} Juice",
+          "time": "modded",
+          "priceFormula": "input*2",
+          "artisan": true
         },
         {
           "id": "juice-veg",
           "anyTags": [
             "vegetable_item"
           ],
-          "output": "Vegetable Juice",
-          "time": "modded"
+          "output": "{item} Vegetable Juice",
+          "time": "modded",
+          "priceFormula": "input*2",
+          "artisan": true
         }
       ],
       "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Artisan_Machines",
@@ -4607,15 +6206,20 @@ window.STARDEW_MOD_WIKI_DATA = {
       "id": "cheese_press",
       "name": "Cheese Press",
       "mod": "vanilla",
-      "source": "vanilla",
+      "source": "vanilla-machines",
       "rules": [
         {
           "id": "cheese-milk",
           "anyTags": [
-            "milk_item"
+            "cow_milk_item"
           ],
           "output": "Cheese",
-          "time": "~3 hr"
+          "time": "~3 hr",
+          "fixedPrice": 230,
+          "artisan": true,
+          "notTags": [
+            "large_milk_item"
+          ]
         },
         {
           "id": "cheese-nut",
@@ -4625,34 +6229,76 @@ window.STARDEW_MOD_WIKI_DATA = {
           "output": "Nut Cheese",
           "time": "~4 hr",
           "source": "corn-artisan"
+        },
+        {
+          "id": "cheese-large-milk",
+          "anyTags": [
+            "large_milk_item"
+          ],
+          "output": "Cheese",
+          "time": "~3 hr",
+          "fixedPrice": 345,
+          "artisan": true,
+          "note": "gold quality"
+        },
+        {
+          "id": "cheese-goat",
+          "anyTags": [
+            "goat_milk_item"
+          ],
+          "notTags": [
+            "large_goat_milk_item"
+          ],
+          "output": "Goat Cheese",
+          "time": "~3 hr",
+          "fixedPrice": 400,
+          "artisan": true
+        },
+        {
+          "id": "cheese-large-goat",
+          "anyTags": [
+            "large_goat_milk_item"
+          ],
+          "output": "Goat Cheese",
+          "time": "~3 hr",
+          "fixedPrice": 600,
+          "artisan": true,
+          "note": "gold quality"
         }
       ],
       "sourcePage": "",
-      "imageFile": "Cheese Press.png"
+      "imageFile": "Cheese_Press.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/7/79/Cheese_Press.png"
     },
     {
       "id": "keg",
       "name": "Keg",
       "mod": "vanilla",
-      "source": "vanilla",
+      "source": "vanilla-keg",
       "rules": [
         {
           "id": "keg-fruit",
           "anyTags": [
             "fruit_item"
           ],
-          "output": "Wine",
+          "notTags": [
+            "sweet_gem_berry_item",
+            "qi_fruit_item"
+          ],
+          "output": "{item} Wine",
           "time": "~7 days",
-          "note": "Generic fruit → wine."
+          "priceFormula": "input*3",
+          "artisan": true
         },
         {
           "id": "keg-veg",
           "anyTags": [
             "vegetable_item"
           ],
-          "output": "Juice",
+          "output": "{item} Juice",
           "time": "~4 days",
-          "note": "Generic vegetable → juice."
+          "priceFormula": "input*2.25",
+          "artisan": true
         },
         {
           "id": "keg-nut-milk",
@@ -4671,24 +6317,78 @@ window.STARDEW_MOD_WIKI_DATA = {
           "output": "Coconut Milk",
           "time": "modded",
           "source": "corn-artisan"
+        },
+        {
+          "id": "keg-wheat",
+          "anyTags": [
+            "wheat_item"
+          ],
+          "output": "Beer",
+          "time": "~1 day",
+          "fixedPrice": 200,
+          "artisan": true
+        },
+        {
+          "id": "keg-hops",
+          "anyTags": [
+            "hops_item"
+          ],
+          "output": "Pale Ale",
+          "time": "~1-2 days",
+          "fixedPrice": 300,
+          "artisan": true
+        },
+        {
+          "id": "keg-coffee",
+          "anyTags": [
+            "coffee_bean_item"
+          ],
+          "output": "Coffee",
+          "time": "~2 hours",
+          "fixedPrice": 150,
+          "inputQty": 5,
+          "artisan": false
+        },
+        {
+          "id": "keg-tea",
+          "anyTags": [
+            "tea_leaves_item"
+          ],
+          "output": "Green Tea",
+          "time": "~3 hours",
+          "fixedPrice": 100,
+          "artisan": false
+        },
+        {
+          "id": "keg-honey",
+          "anyTags": [
+            "honey_item"
+          ],
+          "output": "Mead",
+          "time": "~10 hours",
+          "fixedPrice": 200,
+          "artisan": true
         }
       ],
       "sourcePage": "",
-      "imageFile": "Keg.png"
+      "imageFile": "Keg.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png"
     },
     {
       "id": "loom",
       "name": "Loom",
       "mod": "vanilla",
-      "source": "vanilla",
+      "source": "vanilla-machines",
       "rules": [
         {
           "id": "loom-wool",
           "anyTags": [
             "wool_item"
           ],
-          "output": "Cloth / Yarn / special cloth",
-          "time": "~4 hr"
+          "output": "Cloth",
+          "time": "~4 hr",
+          "fixedPrice": 470,
+          "artisan": true
         },
         {
           "id": "loom-rainbow",
@@ -4701,21 +6401,30 @@ window.STARDEW_MOD_WIKI_DATA = {
         }
       ],
       "sourcePage": "",
-      "imageFile": "Loom.png"
+      "imageFile": "Loom.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/3/3b/Loom.png"
     },
     {
       "id": "mayo_machine",
       "name": "Mayonnaise Machine",
       "mod": "vanilla",
-      "source": "vanilla",
+      "source": "vanilla-machines",
       "rules": [
         {
           "id": "mayo-egg",
           "anyTags": [
             "egg_item"
           ],
+          "notTags": [
+            "duck_egg_item",
+            "dinosaur_egg_item",
+            "ostrich_egg_item",
+            "large_egg_item"
+          ],
           "output": "Mayonnaise",
-          "time": "~3 hr"
+          "time": "~3 hr",
+          "fixedPrice": 190,
+          "artisan": true
         },
         {
           "id": "mayo-herb",
@@ -4739,28 +6448,71 @@ window.STARDEW_MOD_WIKI_DATA = {
           "output": "Oil Mayonnaise",
           "time": "modded",
           "source": "corn-artisan"
+        },
+        {
+          "id": "mayo-large-egg",
+          "anyTags": [
+            "large_egg_item"
+          ],
+          "output": "Mayonnaise",
+          "time": "~3 hr",
+          "fixedPrice": 285,
+          "artisan": true,
+          "note": "gold quality"
+        },
+        {
+          "id": "mayo-duck",
+          "anyTags": [
+            "duck_egg_item"
+          ],
+          "output": "Duck Mayonnaise",
+          "time": "~3 hr",
+          "fixedPrice": 375,
+          "artisan": true
+        },
+        {
+          "id": "mayo-dino",
+          "anyTags": [
+            "dinosaur_egg_item"
+          ],
+          "output": "Dinosaur Mayonnaise",
+          "time": "~3 hr",
+          "fixedPrice": 800,
+          "artisan": true
+        },
+        {
+          "id": "mayo-ostrich",
+          "anyTags": [
+            "ostrich_egg_item"
+          ],
+          "output": "Mayonnaise",
+          "time": "~3 hr",
+          "fixedPrice": 190,
+          "artisan": true,
+          "note": "multiple jars, quality depends on egg"
         }
       ],
       "sourcePage": "",
-      "imageFile": "Mayonnaise Machine.png"
+      "imageFile": "Mayonnaise_Machine.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/e/ef/Mayonnaise_Machine.png"
     },
     {
       "id": "oil_maker",
       "name": "Oil Maker",
       "mod": "vanilla",
-      "source": "vanilla",
+      "source": "vanilla-machines",
       "rules": [
         {
           "id": "oil-crop",
           "anyTags": [
-            "oil_item",
             "olive_item",
             "avocado_item",
             "coconut_item",
             "chili_item"
           ],
           "output": "Oil",
-          "time": "varies"
+          "time": "varies",
+          "source": "corn-artisan"
         },
         {
           "id": "oil-fish",
@@ -4770,32 +6522,81 @@ window.STARDEW_MOD_WIKI_DATA = {
           "output": "Fish Oil",
           "time": "modded",
           "source": "corn-artisan"
+        },
+        {
+          "id": "oil-corn",
+          "anyTags": [
+            "corn_item"
+          ],
+          "output": "Oil",
+          "time": "~16 hr",
+          "fixedPrice": 100,
+          "artisan": false
+        },
+        {
+          "id": "oil-sunflower",
+          "anyTags": [
+            "sunflower_item"
+          ],
+          "output": "Oil",
+          "time": "~1 hr",
+          "fixedPrice": 100,
+          "artisan": false
+        },
+        {
+          "id": "oil-sunflower-seeds",
+          "anyTags": [
+            "sunflower_seeds_item"
+          ],
+          "output": "Oil",
+          "time": "~2 days",
+          "fixedPrice": 100,
+          "artisan": false
+        },
+        {
+          "id": "oil-truffle",
+          "anyTags": [
+            "truffle_item"
+          ],
+          "output": "Truffle Oil",
+          "time": "~6 hr",
+          "fixedPrice": 1065,
+          "artisan": true
         }
       ],
       "sourcePage": "",
-      "imageFile": "Oil Maker.png"
+      "imageFile": "Oil_Maker.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/c/c5/Oil_Maker.png"
     },
     {
       "id": "preserves_jar",
       "name": "Preserves Jar",
       "mod": "vanilla",
-      "source": "vanilla",
+      "source": "vanilla-preserves",
       "rules": [
         {
           "id": "jar-fruit",
           "anyTags": [
             "fruit_item"
           ],
-          "output": "Jelly",
-          "time": "2-3 days"
+          "notTags": [
+            "sweet_gem_berry_item",
+            "qi_fruit_item"
+          ],
+          "output": "{item} Jelly",
+          "time": "2-3 days",
+          "priceFormula": "input*2+50",
+          "artisan": true
         },
         {
           "id": "jar-veg",
           "anyTags": [
             "vegetable_item"
           ],
-          "output": "Pickles",
-          "time": "2-3 days"
+          "output": "Pickled {item}",
+          "time": "2-3 days",
+          "priceFormula": "input*2+50",
+          "artisan": true
         },
         {
           "id": "jar-egg",
@@ -4814,10 +6615,173 @@ window.STARDEW_MOD_WIKI_DATA = {
           "output": "Pickled Fish / Fish Sauce / Garum",
           "time": "modded",
           "source": "corn-artisan"
+        },
+        {
+          "id": "jar-roe",
+          "anyTags": [
+            "roe_item"
+          ],
+          "notTags": [
+            "sturgeon_roe_item"
+          ],
+          "output": "Aged Roe",
+          "time": "~4 days",
+          "priceFormula": "input*2",
+          "artisan": true
+        },
+        {
+          "id": "jar-caviar",
+          "anyTags": [
+            "sturgeon_roe_item"
+          ],
+          "output": "Caviar",
+          "time": "~4 days",
+          "fixedPrice": 500,
+          "artisan": true
         }
       ],
       "sourcePage": "",
-      "imageFile": "Preserves Jar.png"
+      "imageFile": "Preserves_Jar.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/1/1e/Preserves_Jar.png"
+    },
+    {
+      "id": "vanilla_dehydrator",
+      "name": "Dehydrator",
+      "mod": "vanilla",
+      "source": "vanilla-dehydrator",
+      "rules": [
+        {
+          "id": "dehydrator-fruit",
+          "anyTags": [
+            "fruit_item"
+          ],
+          "notTags": [
+            "grape_item",
+            "sweet_gem_berry_item",
+            "qi_fruit_item"
+          ],
+          "output": "Dried {item}",
+          "time": "overnight",
+          "priceFormula": "input*7.5+25",
+          "inputQty": 5,
+          "artisan": true
+        },
+        {
+          "id": "dehydrator-grape",
+          "anyTags": [
+            "grape_item"
+          ],
+          "output": "Raisins",
+          "time": "overnight",
+          "fixedPrice": 600,
+          "inputQty": 5,
+          "artisan": true
+        },
+        {
+          "id": "dehydrator-mushroom",
+          "anyTags": [
+            "mushroom_item"
+          ],
+          "output": "Dried Mushrooms",
+          "time": "overnight",
+          "priceFormula": "input*7.5+25",
+          "inputQty": 5,
+          "artisan": true
+        }
+      ],
+      "imageFile": "Dehydrator.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/0/02/Dehydrator.png"
+    },
+    {
+      "id": "fish_smoker",
+      "name": "Fish Smoker",
+      "mod": "vanilla",
+      "source": "vanilla-fish-smoker",
+      "rules": [
+        {
+          "id": "fish-smoker-fish",
+          "anyTags": [
+            "fish_item"
+          ],
+          "output": "Smoked {item}",
+          "time": "~50 min",
+          "priceFormula": "input*2",
+          "artisan": true,
+          "requires": "Coal"
+        }
+      ],
+      "imageFile": "Fish_Smoker.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/7/79/Fish_Smoker.png"
+    },
+    {
+      "id": "mill",
+      "name": "Mill",
+      "mod": "vanilla",
+      "source": "vanilla-machines",
+      "rules": [
+        {
+          "id": "mill-wheat",
+          "anyTags": [
+            "wheat_item"
+          ],
+          "output": "Wheat Flour",
+          "time": "overnight",
+          "fixedPrice": 50,
+          "artisan": false
+        },
+        {
+          "id": "mill-rice",
+          "anyTags": [
+            "unmilled_rice_item",
+            "rice_item"
+          ],
+          "output": "Rice",
+          "time": "overnight",
+          "fixedPrice": 100,
+          "artisan": false
+        },
+        {
+          "id": "mill-beet",
+          "anyTags": [
+            "beet_item"
+          ],
+          "output": "Sugar",
+          "time": "overnight",
+          "fixedPrice": 50,
+          "artisan": false,
+          "note": "3 Sugar"
+        }
+      ],
+      "imageFile": "Mill.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/9/90/Mill.png"
+    },
+    {
+      "id": "seed_maker",
+      "name": "Seed Maker",
+      "mod": "vanilla",
+      "source": "vanilla-machines",
+      "rules": [
+        {
+          "id": "seed-maker-crops",
+          "anyTags": [
+            "crop_item",
+            "fruit_item",
+            "vegetable_item",
+            "flower_item"
+          ],
+          "notTags": [
+            "sweet_gem_berry_item",
+            "tea_leaves_item",
+            "fiber_item"
+          ],
+          "output": "Seeds",
+          "time": "~20 min",
+          "priceText": "varies",
+          "note": "usually 1-3 seeds; small chance of Mixed Seeds or Ancient Seeds"
+        }
+      ],
+      "imageFile": "Seed_Maker.png",
+      "image": "https://stardewvalleywiki.com/mediawiki/images/1/19/Seed_Maker.png"
     }
   ],
   "recipes": [
@@ -4932,6 +6896,26 @@ window.STARDEW_MOD_WIKI_DATA = {
         }
       ],
       "sourcePage": "https://stardew-valley-expanded.fandom.com/wiki/Fish"
+    },
+    {
+      "id": "corn_recipe_mustard",
+      "name": "Mustard",
+      "mod": "cornucopia",
+      "flexible": false,
+      "ingredients": [
+        {
+          "item": "corn_mustard_seeds",
+          "label": "Mustard Seeds"
+        },
+        {
+          "item": "vinegar",
+          "label": "Vinegar"
+        }
+      ],
+      "source": "corn-cooking",
+      "sourcePage": "https://stardewcornucopia.wiki.gg/wiki/Mustard",
+      "imageFile": "Mustard.png",
+      "notes": "Cornucopia cooking recipe."
     }
   ],
   "animals": [
